@@ -317,7 +317,7 @@ local bossvigneron = {
                           if amount == nil then
                             ESX.ShowNotification('Montant invalide')
                           else
-                              TriggerServerEvent('zSociety:withdraw', 'vigneron', amount)
+                              TriggerServerEvent('esx_society:withdrawMoney', 'vigneron', amount)
                               RefreshvigneronMoney('vigneron')	
                           end
                 elseif btn.name == "Déposer de l'Argent" then
@@ -326,7 +326,7 @@ local bossvigneron = {
                           if amount == nil then
                             ESX.ShowNotification('Montant invalide')
                           else
-                              TriggerServerEvent('zSociety:Dépot', 'vigneron', amount)
+                              TriggerServerEvent('esx_society:depositMoney', 'vigneron', amount)
                               RefreshvigneronMoney('vigneron')
                           end
                 elseif btn.name == "Recruter" then
